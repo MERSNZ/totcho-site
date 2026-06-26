@@ -11,6 +11,12 @@ Public website for [Tot](https://github.com/MERSNZ/tot-app) — privacy policy a
 
 Use **`https://totcho.app/privacy/`** in App Store Connect, Google Play Console, and Supabase OAuth settings.
 
+## Favicons
+
+Static icons live in **`favicon/`** (ICO, SVG, PNG, `site.webmanifest`). Linked from each page `<head>` with root-absolute paths (`/favicon/...`) so they work on `/` and `/privacy/`.
+
+After changing icons, hard-refresh or clear cache to verify in the browser tab.
+
 ## Enable GitHub Pages
 
 1. Repo **Settings → Pages**

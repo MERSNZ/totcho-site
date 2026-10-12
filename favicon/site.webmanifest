@@ -1,21 +1,29 @@
 {
   "name": "Tot",
   "short_name": "Tot",
+  "description": "Tot is a carbohydrate calculator for families. Free, private, and offline-first.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#E60080",
+  "theme_color": "#E60080",
   "icons": [
     {
-      "src": "/favicon/web-app-manifest-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
+      "src": "/favicon/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     },
     {
-      "src": "/favicon/web-app-manifest-512x512.png",
+      "src": "/favicon/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any"
     }
-  ],
-  "theme_color": "#E60080",
-  "background_color": "#E60080",
-  "display": "standalone"
+  ]
 }

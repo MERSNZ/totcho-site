@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'InterVariable';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/InterVariable-latin.woff2') format('woff2');
+}
+
 :root {
   color-scheme: light;
   --grey-50: #f9f9f9;
@@ -6,7 +14,6 @@
   --grey-600: #525252;
   --grey-900: #171717;
   --pink: #e60080;
-  --max-width: 42rem;
 }
 
 * {
@@ -16,6 +23,7 @@
 body {
   margin: 0;
   font-family:
+    'InterVariable',
     'Inter',
     system-ui,
     -apple-system,
@@ -36,23 +44,6 @@ a:hover {
   color: var(--pink);
 }
 
-.page {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 2.5rem 1rem 3rem;
-}
-
-.header {
-  margin-bottom: 2rem;
-}
-
-.logo {
-  display: block;
-  width: 120px;
-  height: auto;
-  margin-bottom: 1.5rem;
-}
-
 h1 {
   margin: 0 0 1rem;
   font-size: 1.75rem;
@@ -65,63 +56,6 @@ h1 {
   margin: 0;
   font-size: 1rem;
   line-height: 1.5;
-}
-
-.links {
-  margin-bottom: 2.5rem;
-}
-
-.link-card {
-  display: inline-block;
-  width: fit-content;
-  padding: 1rem 1.25rem;
-  border: 1px solid #e5e5e5;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  background: var(--grey-50);
-}
-
-.policy-header {
-  margin-bottom: 2rem;
-}
-
-.policy-header h1 {
-  margin-bottom: 0.5rem;
-}
-
-.back-link {
-  display: inline-block;
-  margin-bottom: 1.5rem;
-  font-size: 0.9375rem;
-  text-decoration: none;
-}
-
-.last-updated {
-  margin: 0 0 1rem;
-  color: var(--grey-500);
-}
-
-.policy-opening {
-  margin-bottom: 2rem;
-}
-
-.policy-opening h2 {
-  margin: 1.5rem 0 0.75rem;
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--grey-900);
-}
-
-section {
-  margin-bottom: 2rem;
-}
-
-section h2 {
-  margin: 0 0 1rem;
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--grey-900);
 }
 
 p {
@@ -142,23 +76,668 @@ li {
   margin: 0.5rem 0;
 }
 
-.contact-email {
-  margin-top: 0.5rem;
-  font-weight: 500;
+/* ---------------------------------------------------------------------------
+   Marketing pages (body.site). Rules above are base element styles.
+   --------------------------------------------------------------------------- */
+
+:root {
+  --pink-tint: #fff2f8;
+  --surface: var(--grey-50);
+  --border: #e5e5e5;
+  --site-width: 1100px;
+}
+
+.site {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.site section {
+  margin: 0;
+}
+
+.site p {
+  margin: 0 0 1rem;
+}
+
+.site p:last-child {
+  margin-bottom: 0;
+}
+
+.site a {
+  color: var(--pink);
+  text-underline-offset: 0.15em;
+}
+
+.site a:hover {
   color: var(--grey-900);
 }
 
-.contact-email a {
-  text-decoration: none;
+.site a:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 3px;
 }
 
-.footer {
-  padding-top: 1.5rem;
-  border-top: 1px solid #e5e5e5;
+.site h2 {
+  margin: 0 0 1rem;
+  font-size: 1.625rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--grey-900);
+}
+
+.site h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--grey-900);
+}
+
+.container {
+  max-width: var(--site-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.prose {
+  max-width: 65ch;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.container.prose {
+  max-width: var(--site-width);
+}
+
+.container.prose > * {
+  max-width: 65ch;
+}
+
+/* Skip link */
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  background: var(--grey-900);
+}
+
+.site .skip-link {
+  color: #fff;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header and nav */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+  transition: transform 0.25s ease;
+}
+
+/* Toggled by /scripts/header.js; without JS the header simply stays pinned. */
+.site-header.is-hidden {
+  transform: translateY(-100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header {
+    transition: none;
+  }
+}
+
+.site-header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.site-logo {
+  display: block;
+  line-height: 0;
+}
+
+.site-logo img {
+  width: 98px;
+  height: auto;
+}
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav li {
+  margin: 0;
+}
+
+@media (max-width: 479px) {
+  .site-nav ul {
+    margin-left: -0.75rem;
+  }
+}
+
+.site .site-nav a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--grey-900);
+}
+
+.site .site-nav a:hover,
+.site .site-nav a[aria-current='page'] {
+  background: var(--pink-tint);
+  color: var(--pink);
+}
+
+/* Hero */
+
+.hero {
+  padding: 3rem 0 3.5rem;
+}
+
+.hero-grid {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.page-intro {
+  padding: 3rem 0 3.5rem;
+}
+
+.site .hero h1,
+.site .page-intro h1 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.25rem, 7vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.lede {
+  max-width: 34rem;
+  font-size: 1.1875rem;
+}
+
+.hero-note {
   font-size: 0.9375rem;
   color: var(--grey-500);
 }
 
-.footer a {
-  font-weight: 500;
+/* App store badges */
+
+.store-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.75rem 0 1rem;
+}
+
+.store-badges a {
+  display: block;
+  line-height: 0;
+}
+
+.store-badges img {
+  width: 162px;
+  height: 48px;
+}
+
+@media (max-width: 379px) {
+  .store-badges {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Phone-framed screenshots */
+
+.phone {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 40px;
+  background: var(--grey-900);
+  box-shadow: 0 24px 48px -16px rgba(23, 23, 23, 0.35);
+}
+
+.phone img,
+.phone-placeholder {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+
+.phone-placeholder {
+  aspect-ratio: 1080 / 2291;
+}
+
+.photo {
+  margin: 0 auto;
+}
+
+.photo img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(300px, 100%);
+  max-height: 300px;
+  opacity: 0.75;
+}
+
+.photo-tilt {
+  transform: rotate(10deg);
+}
+
+.phone-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.875rem;
+  color: var(--grey-400);
+}
+
+.split-top {
+  margin-top: 2rem;
+  align-items: start;
+}
+
+.split-top .card-grid {
+  margin: 0;
+}
+
+.phone-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.site .phone-row .phone {
+  flex: 1 1 0;
+  max-width: 260px;
+  margin: 0;
+}
+
+.phone-row:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 3px;
+}
+
+/* Narrow screens: a swipeable strip, one phone at a time. */
+@media (max-width: 639px) {
+  .phone-row {
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 2rem -1.25rem 0;
+    padding: 0 1.25rem 2.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 1.25rem;
+    scrollbar-width: none;
+  }
+
+  .phone-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site .phone-row .phone {
+    flex: 0 0 72%;
+    scroll-snap-align: start;
+  }
+}
+
+/* Content blocks */
+
+.block {
+  padding: 3.5rem 0;
+}
+
+.block-tint {
+  background: var(--surface);
+}
+
+.split {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.card-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site .card {
+  margin: 0;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.card-icon {
+  display: block;
+  margin-bottom: 1rem;
+  fill: none;
+  stroke: var(--grey-900);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.steps {
+  margin: 0 0 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.steps li {
+  margin: 0 0 0.75rem;
+  padding-left: 0.25rem;
+}
+
+.steps li::marker {
+  font-weight: 600;
+  color: var(--grey-900);
+}
+
+.steps strong,
+.ticks li {
+  color: var(--grey-900);
+}
+
+.ticks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ticks li {
+  position: relative;
+  margin: 0 0 0.75rem;
+  padding-left: 2rem;
+}
+
+.ticks li::before {
+  content: '';
+  position: absolute;
+  top: 0.15em;
+  left: 0.25rem;
+  width: 0.5rem;
+  height: 0.9rem;
+  border: solid var(--pink);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.site .arrow-link {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site .arrow-link:hover {
+  text-decoration: underline;
+}
+
+/* FAQ */
+
+.site .faq-block {
+  padding-top: 0;
+}
+
+.faq-list {
+  border-top: 1px solid var(--border);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--grey-900);
+  list-style: none;
+  cursor: pointer;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Plus sign, which becomes a minus when the answer is open. */
+.faq-item summary::after {
+  content: '';
+  flex: none;
+  width: 0.875rem;
+  height: 0.875rem;
+  margin-top: 0.4em;
+  background:
+    linear-gradient(currentColor, currentColor) center / 100% 1.5px no-repeat,
+    linear-gradient(currentColor, currentColor) center / 1.5px 100% no-repeat;
+}
+
+.faq-item[open] summary::after {
+  background: linear-gradient(currentColor, currentColor) center / 100% 1.5px no-repeat;
+}
+
+.faq-item summary:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 3px;
+}
+
+.faq-answer {
+  padding: 0 2.5rem 1.5rem 0;
+}
+
+.faq-answer strong {
+  color: var(--grey-900);
+}
+
+/* About */
+
+.site .about-story {
+  padding-top: 0;
+}
+
+.site .about-contact {
+  margin-top: 2rem;
+  color: var(--grey-900);
+}
+
+.about-story .store-badges {
+  margin-bottom: 0;
+}
+
+/* Privacy policy */
+
+.site .last-updated {
+  margin-top: -0.5rem;
+  color: var(--grey-500);
+}
+
+.site .policy {
+  padding-top: 0;
+}
+
+.site .policy h2 {
+  margin: 2.5rem 0 0.75rem;
+  font-size: 1.25rem;
+}
+
+.policy ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.policy li {
+  margin: 0 0 0.375rem;
+}
+
+/* Closing call to action */
+
+.cta-band {
+  padding: 3.5rem 0;
+  text-align: center;
+  background: var(--surface);
+}
+
+.site .cta-band h2 {
+  margin: 0;
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  font-weight: 700;
+}
+
+.cta-band .store-badges {
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+@media (max-width: 379px) {
+  .cta-band .store-badges {
+    align-items: center;
+  }
+}
+
+/* Footer */
+
+.site-footer {
+  padding: 2.5rem 0 3rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9375rem;
+  color: var(--grey-600);
+}
+
+.site-footer-brand {
+  font-weight: 600;
+  color: var(--grey-900);
+}
+
+.site-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer-links li {
+  margin: 0;
+}
+
+.site .site-footer a {
+  text-decoration: none;
+}
+
+.site .site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site .site-footer-links a {
+  color: var(--grey-900);
+}
+
+.site .site-footer-links a[aria-current='page'] {
+  font-weight: 600;
+}
+
+.site .disclaimer {
+  max-width: 65ch;
+  margin-top: 1.5rem;
+  font-size: 0.8125rem;
+  color: var(--grey-500);
+}
+
+/* Wider screens */
+
+@media (min-width: 640px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 4.5rem 0 5rem;
+  }
+
+  .hero-grid,
+  .split {
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+  }
+
+  .hero-grid .phone,
+  .split .phone {
+    width: 280px;
+  }
+
+  .split .photo {
+    margin: 0;
+  }
+
+  .split-flip {
+    grid-template-columns: auto 1fr;
+  }
+
+  .split-flip .phone {
+    order: -1;
+  }
+
+  .page-intro {
+    padding: 4.5rem 0 4rem;
+  }
+
+  .block,
+  .cta-band {
+    padding: 5rem 0;
+  }
+
+  .site h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .split-top {
+    grid-template-columns: 1fr;
+  }
 }

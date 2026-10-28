@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-NZ">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,161 +9,208 @@
       content="Tot privacy policy — what we store, why, and how you can delete it."
     />
     <link rel="canonical" href="https://totcho.app/privacy/" />
+    <meta name="theme-color" content="#E60080" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tot privacy policy" />
+    <meta property="og:description" content="Tot privacy policy — what we store, why, and how you can delete it." />
+    <meta property="og:url" content="https://totcho.app/privacy/" />
+    <meta property="og:image" content="https://totcho.app/images/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link rel="icon" href="/favicon/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon/favicon-96x96.png" type="image/png" sizes="96x96" />
     <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="/favicon/site.webmanifest" />
-    <meta name="theme-color" content="#E60080" />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="preload" href="/fonts/InterVariable-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/scripts/header.js" defer></script>
   </head>
-  <body>
-    <main class="page">
-      <a class="back-link" href="../">← Tot</a>
+  <body class="site">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-      <header class="policy-header">
-        <h1>Tot privacy policy</h1>
-        <p class="last-updated">Last updated: July 2026</p>
-      </header>
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <a class="site-logo" href="/">
+          <img src="/images/logo.svg" width="98" height="40" alt="Tot home" />
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="/how-it-works/">How it works</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-      <div class="policy-opening">
-        <p>
-          Tot is designed from the ground up to collect as little data as possible. This policy
-          explains clearly what we store, why, and how you can delete it.
-        </p>
-        <h2>Who we are</h2>
-        <p>
-          Tot is an independent app made by a small family team. It is a carbohydrate calculator —
-          nothing more. It has no connection to any medical provider, healthcare organisation, or
-          pharmaceutical company.
+    <main id="main">
+      <section class="page-intro">
+        <div class="container prose">
+          <h1>Tot privacy policy</h1>
+          <p class="last-updated">Last updated: July 2026</p>
+        </div>
+      </section>
+
+      <div class="block policy">
+        <div class="container prose">
+          <div class="policy-opening">
+            <p>
+              Tot is designed from the ground up to collect as little data as possible. This policy
+              explains clearly what we store, why, and how you can delete it.
+            </p>
+            <h2>Who we are</h2>
+            <p>
+              Tot is an independent app made by a small family team. It is a carbohydrate calculator —
+              nothing more. It has no connection to any medical provider, healthcare organisation, or
+              pharmaceutical company.
+            </p>
+          </div>
+
+          <section>
+            <h2>What we do not collect</h2>
+            <ul>
+              <li>Your name</li>
+              <li>Your email address</li>
+              <li>Your password</li>
+              <li>Your location</li>
+              <li>Device identifiers beyond what is needed to connect your device to your household</li>
+              <li>Health or medical data of any kind</li>
+              <li>Analytics or usage statistics</li>
+              <li>Advertising identifiers</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>What we do store</h2>
+            <p>
+              <span class="emphasis">If you create a household account:</span><br />
+              Your sign-in is handled entirely by Apple or Google. Tot never sees your email address or
+              password. We store only the unique identifier that Apple or Google provides — this is used
+              solely to recognise you if you sign in again on a new device.
+            </p>
+            <p>
+              <span class="emphasis">If you join a household via QR code:</span><br />
+              You have no account. You are identified only by your device, and only within your
+              household. No personal information is stored.
+            </p>
+            <p>
+              <span class="emphasis">Your household data:</span><br />
+              The foods, carbohydrate values, and session logs you add to Tot are stored in your
+              household's private database. This data is:
+            </p>
+            <ul>
+              <li>Only accessible to devices connected to your household</li>
+              <li>Never shared with third parties</li>
+              <li>Never used for advertising or analytics</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>How your data is protected</h2>
+            <p>
+              Your household data is stored on secure servers provided by Supabase (supabase.com), a
+              trusted cloud database provider. Access to your data is enforced by strict database-level
+              security policies — no other household can ever read or write your data.
+            </p>
+          </section>
+
+          <section>
+            <h2>Children</h2>
+            <p>
+              Tot is designed to be used by families, including children. We do not knowingly collect
+              any personal information from children. Children who use Tot as a household member have no
+              account and no personal data in the system.
+            </p>
+          </section>
+
+          <section>
+            <h2>Third parties</h2>
+            <p>
+              Tot does not share any data with third parties. Tot does not contain advertising of any
+              kind. Tot does not use analytics services.
+            </p>
+            <p>
+              If you choose to donate from Settings → Support Tot, Tot opens our website (totcho.app)
+              in your browser. Any payment you make there is voluntary and does not unlock features in
+              the app. Tot does not process payments inside the app.
+            </p>
+            <p>The only third-party services used are:</p>
+            <ul>
+              <li>Apple / Google — for sign-in authentication (Owner only)</li>
+              <li>Supabase — for secure cloud storage of your household data</li>
+              <li>Stripe — for optional card donations on totcho.app (only if you choose to donate)</li>
+              <li>PayPal — for optional PayPal donations on totcho.app (only if you choose to donate)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Exporting your data</h2>
+            <p>
+              The household Owner can download a copy of all household food data and cookware weights at
+              any time as a CSV file from Settings → Data → Export data. This file is generated on your
+              device and shared directly via your device's share sheet — it is never sent to or stored on
+              our servers. You can save it to your files, email it to yourself, or share it however you
+              choose.
+            </p>
+            <p>
+              Log entries are not included in the export as they are session-based records that expire
+              automatically after 4 weeks.
+            </p>
+          </section>
+
+          <section>
+            <h2>Deleting your data</h2>
+            <p>
+              The household Owner can permanently delete the entire household account and all associated
+              data at any time from Settings → Household account → Delete account. This cannot be
+              undone. All food data, logs, and member registrations are deleted immediately and cannot be
+              recovered.
+            </p>
+          </section>
+
+          <section>
+            <h2>Changes to this policy</h2>
+            <p>
+              If we make meaningful changes to this policy, we will update the date at the top of this
+              page. We will never introduce data collection practices that contradict the principles above
+              without clearly notifying you.
+            </p>
+          </section>
+
+          <section>
+            <h2>Contact</h2>
+            <p>
+              If you have any questions about this privacy policy or how Tot handles your data, please
+              contact us at:
+            </p>
+            <p class="contact-email">
+              <a href="mailto:hello@totcho.app">hello@totcho.app</a>
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="site-footer-brand">Tot — carb counting for families</p>
+        <nav aria-label="Footer">
+          <ul class="site-footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/how-it-works/">How it works</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/privacy/" aria-current="page">Privacy policy</a></li>
+          </ul>
+        </nav>
+        <p>Questions? <a href="mailto:hello@totcho.app">hello@totcho.app</a></p>
+        <p class="disclaimer">
+          Tot is a carbohydrate calculator, not a medical device. It does not provide medical advice or
+          insulin dosing. Always follow the guidance of your healthcare team.
         </p>
       </div>
-
-      <section>
-        <h2>What we do not collect</h2>
-        <ul>
-          <li>Your name</li>
-          <li>Your email address</li>
-          <li>Your password</li>
-          <li>Your location</li>
-          <li>Device identifiers beyond what is needed to connect your device to your household</li>
-          <li>Health or medical data of any kind</li>
-          <li>Analytics or usage statistics</li>
-          <li>Advertising identifiers</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>What we do store</h2>
-        <p>
-          <span class="emphasis">If you create a household account:</span><br />
-          Your sign-in is handled entirely by Apple or Google. Tot never sees your email address or
-          password. We store only the unique identifier that Apple or Google provides — this is used
-          solely to recognise you if you sign in again on a new device.
-        </p>
-        <p>
-          <span class="emphasis">If you join a household via QR code:</span><br />
-          You have no account. You are identified only by your device, and only within your
-          household. No personal information is stored.
-        </p>
-        <p>
-          <span class="emphasis">Your household data:</span><br />
-          The foods, carbohydrate values, and session logs you add to Tot are stored in your
-          household's private database. This data is:
-        </p>
-        <ul>
-          <li>Only accessible to devices connected to your household</li>
-          <li>Never shared with third parties</li>
-          <li>Never used for advertising or analytics</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>How your data is protected</h2>
-        <p>
-          Your household data is stored on secure servers provided by Supabase (supabase.com), a
-          trusted cloud database provider. Access to your data is enforced by strict database-level
-          security policies — no other household can ever read or write your data.
-        </p>
-      </section>
-
-      <section>
-        <h2>Children</h2>
-        <p>
-          Tot is designed to be used by families, including children. We do not knowingly collect
-          any personal information from children. Children who use Tot as a household member have no
-          account and no personal data in the system.
-        </p>
-      </section>
-
-      <section>
-        <h2>Third parties</h2>
-        <p>
-          Tot does not share any data with third parties. Tot does not contain advertising of any
-          kind. Tot does not use analytics services.
-        </p>
-        <p>
-          If you choose to donate from Settings → Support Tot, Tot opens our website (totcho.app)
-          in your browser. Any payment you make there is voluntary and does not unlock features in
-          the app. Tot does not process payments inside the app.
-        </p>
-        <p>The only third-party services used are:</p>
-        <ul>
-          <li>Apple / Google — for sign-in authentication (Owner only)</li>
-          <li>Supabase — for secure cloud storage of your household data</li>
-          <li>Stripe — for optional card donations on totcho.app (only if you choose to donate)</li>
-          <li>PayPal — for optional PayPal donations on totcho.app (only if you choose to donate)</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Exporting your data</h2>
-        <p>
-          The household Owner can download a copy of all household food data and cookware weights at
-          any time as a CSV file from Settings → Data → Export data. This file is generated on your
-          device and shared directly via your device's share sheet — it is never sent to or stored on
-          our servers. You can save it to your files, email it to yourself, or share it however you
-          choose.
-        </p>
-        <p>
-          Log entries are not included in the export as they are session-based records that expire
-          automatically after 4 weeks.
-        </p>
-      </section>
-
-      <section>
-        <h2>Deleting your data</h2>
-        <p>
-          The household Owner can permanently delete the entire household account and all associated
-          data at any time from Settings → Household account → Delete account. This cannot be
-          undone. All food data, logs, and member registrations are deleted immediately and cannot be
-          recovered.
-        </p>
-      </section>
-
-      <section>
-        <h2>Changes to this policy</h2>
-        <p>
-          If we make meaningful changes to this policy, we will update the date at the top of this
-          page. We will never introduce data collection practices that contradict the principles above
-          without clearly notifying you.
-        </p>
-      </section>
-
-      <section>
-        <h2>Contact</h2>
-        <p>
-          If you have any questions about this privacy policy or how Tot handles your data, please
-          contact us at:
-        </p>
-        <p class="contact-email">
-          <a href="mailto:hello@totcho.app">hello@totcho.app</a>
-        </p>
-      </section>
-
-      <footer class="footer">
-        <p><a href="../">← Back to Tot</a></p>
-      </footer>
-    </main>
+    </footer>
   </body>
 </html>

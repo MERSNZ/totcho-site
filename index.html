@@ -1,42 +1,304 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-NZ">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tot — Carbohydrate calculator</title>
+    <title>Tot — Free carb counting app for families</title>
     <meta
       name="description"
-      content="Tot is a carbohydrate calculator for families. Free, private, and offline-first."
+      content="A free carbohydrate calculator for families living with type 1 diabetes. Weigh it, tap it, see the total. No ads, no subscriptions."
     />
+    <link rel="canonical" href="https://totcho.app/" />
+    <meta name="theme-color" content="#E60080" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tot — Free carb counting app for families" />
+    <meta
+      property="og:description"
+      content="A free carbohydrate calculator for families living with type 1 diabetes. Weigh it, tap it, see the total. No ads, no subscriptions."
+    />
+    <meta property="og:url" content="https://totcho.app/" />
+    <meta property="og:image" content="https://totcho.app/images/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <link rel="icon" href="/favicon/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon/favicon-96x96.png" type="image/png" sizes="96x96" />
     <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="/favicon/site.webmanifest" />
-    <meta name="theme-color" content="#E60080" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" href="/fonts/InterVariable-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/scripts/header.js" defer></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Tot",
+        "operatingSystem": "iOS, Android",
+        "applicationCategory": "HealthApplication",
+        "url": "https://totcho.app/",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "NZD"
+        }
+      }
+    </script>
   </head>
-  <body>
-    <main class="page">
-      <header class="header">
-        <img class="logo" src="images/logo.svg" width="120" height="49" alt="Tot" />
-        <h1>Tot carbohydrate calculator for families</h1>
-        <p class="lede">
-          Use your added foods and ingredients to quickly work out how much carbohydrate is in your food. Free to use —
-          no subscriptions, no ads, no data selling.
-        </p>
-      </header>
+  <body class="site">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-      <nav class="links" aria-label="Site links">
-        <a class="link-card" href="privacy/">Privacy policy</a>
-      </nav>
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <a class="site-logo" href="/" aria-current="page">
+          <img src="/images/logo.svg" width="98" height="40" alt="Tot home" />
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="/how-it-works/">How it works</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-      <footer class="footer">
-        <p>
-          Questions?
-          <a href="mailto:hello@totcho.app">hello@totcho.app</a>
-        </p>
-      </footer>
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <h1>Carb counting, minus the maths.</h1>
+            <p class="lede">
+              Tot is a free carbohydrate calculator for families living with type 1 diabetes. Pick the
+              food, weigh it, and Tot adds it up.
+            </p>
+            <div class="store-badges">
+              <!-- TODO: App Store URL -->
+              <a href="#">
+                <img src="/images/badges/app-store.svg" width="162" height="48" alt="Download on the App Store" />
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=app.totcho.tot">
+                <img src="/images/badges/google-play.svg" width="162" height="48" alt="Get it on Google Play" />
+              </a>
+            </div>
+            <p class="hero-note">Free. No subscriptions, no ads, no data selling.</p>
+          </div>
+          <figure class="phone">
+            <img
+              src="/images/screenshots/home-list.png"
+              width="1080"
+              height="2291"
+              alt="Tot's saved foods, listed A to Z with a search bar, and a running total of 38 g carbs"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="block block-tint" aria-labelledby="familiar">
+        <div class="container split">
+          <div class="prose">
+            <h2 id="familiar">Sound familiar?</h2>
+            <p>
+              Peer at the label. Weigh the food. Work out the carbs. Check your sum. Then do it again for the
+              next thing on the plate.
+            </p>
+            <p>
+              Breakfast, school lunch, after-school snack, dinner — every day. There's no sugar-coating it,
+              carb counting is a burden.
+            </p>
+          </div>
+          <figure class="photo photo-tilt">
+            <img
+              src="/images/screenshots/cereal-packet.png"
+              width="1200"
+              height="1200"
+              loading="lazy"
+              alt="Back of a breakfast cereal sachet, showing carbohydrate at 65.2 g per 100 g on the nutrition panel"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="block" aria-labelledby="one-job">
+        <div class="container">
+          <div class="prose">
+            <h2 id="one-job">One job, done well</h2>
+            <p>
+              Tot does one thing: works out how many carbs are in the food you're preparing and eating.
+              No diet tracking, no charts, no features you'll never use. Just quick, accurate carb counting.
+            </p>
+          </div>
+          <div class="split split-top">
+            <!-- Card icons: Lucide (https://lucide.dev), ISC licence -->
+            <ul class="card-grid">
+              <li class="card">
+                <svg class="card-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="28" height="28">
+                  <rect width="16" height="20" x="4" y="2" rx="2" />
+                  <line x1="8" x2="16" y1="6" y2="6" />
+                  <line x1="16" x2="16" y1="14" y2="18" />
+                  <path d="M16 10h.01M12 10h.01M8 10h.01M12 14h.01M8 14h.01M12 18h.01M8 18h.01" />
+                </svg>
+                <h3>Less mental maths</h3>
+                <p>Save a food once with its carb %. After that, just weigh it and tap.</p>
+              </li>
+              <li class="card">
+                <svg class="card-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="28" height="28">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="m16 9-5.5 5.5L8 12" />
+                </svg>
+                <h3>Fewer slip-ups</h3>
+                <p>
+                  Tot does the arithmetic, so you're not adding numbers in your head at 7am with a lunchbox
+                  half-packed.
+                </p>
+              </li>
+              <li class="card">
+                <svg class="card-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="28" height="28">
+                  <path d="M2 12h20" />
+                  <path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8" />
+                  <path d="m4 8 16-4" />
+                  <path d="m8.86 6.78-.45-1.81a2 2 0 0 1 1.45-2.43l1.94-.48a2 2 0 0 1 2.43 1.46l.45 1.8" />
+                </svg>
+                <h3>Home cooking, sorted</h3>
+                <p>
+                  Tot up carb containing ingredients as you cook, then weigh the finished dish. Tot turns it
+                  into a food with a known carb %, so a scoop of homemade lasagne is as easy as a slice of
+                  bread.
+                </p>
+              </li>
+              <li class="card">
+                <svg class="card-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="28" height="28">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                  <circle cx="9" cy="7" r="4" />
+                </svg>
+                <h3>The whole household, on the same page</h3>
+                <p>
+                  One shared account for your family. Invite a partner, grandparent or older child with a
+                  quick QR code scan.
+                </p>
+              </li>
+              <li class="card">
+                <svg class="card-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="28" height="28">
+                  <path d="M12 20h.01" />
+                  <path d="M8.5 16.429a5 5 0 0 1 7 0" />
+                  <path d="M5 12.859a10 10 0 0 1 5.17-2.69" />
+                  <path d="M19 12.859a10 10 0 0 0-2.007-1.523" />
+                  <path d="M2 8.82a15 15 0 0 1 4.177-2.643" />
+                  <path d="M22 8.82a15 15 0 0 0-11.288-3.764" />
+                  <path d="m2 2 20 20" />
+                </svg>
+                <h3>Works anywhere</h3>
+                <p>
+                  Tot works fully offline, even in airplane mode. Changes sync to everyone's phones when
+                  you're back online.
+                </p>
+              </li>
+            </ul>
+            <figure class="phone">
+              <img
+                src="/images/screenshots/home-weigh.png"
+                width="1080"
+                height="2291"
+                loading="lazy"
+                alt="Weighing 65 g of banana at 20.4% carbohydrate in Tot, giving 13.3 g carbs"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="block block-tint" aria-labelledby="how">
+        <div class="container split">
+          <div class="prose">
+            <h2 id="how">How it works</h2>
+            <ol class="steps">
+              <li><strong>Pick the food</strong> from your saved list.</li>
+              <li><strong>Weigh it</strong> on your kitchen scales, or enter the number of pieces.</li>
+              <li><strong>Add it to your Tot list.</strong> Tot shows the total carbs as you go.</li>
+            </ol>
+            <p><a class="arrow-link" href="/how-it-works/">See it step by step →</a></p>
+          </div>
+          <figure class="phone">
+            <img
+              src="/images/screenshots/tot-list.png"
+              width="1080"
+              height="2291"
+              loading="lazy"
+              alt="Tot list with four foods, their weights and carbs, adding up to 45 g total carbohydrate"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="block" aria-labelledby="need">
+        <div class="container prose">
+          <h2 id="need">What you'll need</h2>
+          <ul class="ticks">
+            <li>The Tot app on your iPhone or Android phone</li>
+            <li>Digital kitchen scales</li>
+            <li>The carbohydrate % from your food packaging</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="block block-tint" aria-labelledby="free">
+        <div class="container prose">
+          <h2 id="free">Free. Really.</h2>
+          <p>
+            No subscriptions, no ads, no selling your data. Sign in with the Google or Apple account you
+            already have.
+          </p>
+        </div>
+      </section>
+
+      <section class="block" aria-labelledby="parent">
+        <div class="container prose">
+          <h2 id="parent">Made by a parent who gets it</h2>
+          <p>
+            Tot was designed by a parent whose daughter has type 1 diabetes. We built it for our own kitchen
+            and wanted other families to have it too.
+          </p>
+          <p><a class="arrow-link" href="/about/">Read our story →</a></p>
+        </div>
+      </section>
+
+      <section class="cta-band" aria-labelledby="cta">
+        <div class="container">
+          <h2 id="cta">Make your next meal a little easier.</h2>
+          <div class="store-badges">
+            <!-- TODO: App Store URL -->
+            <a href="#">
+              <img src="/images/badges/app-store.svg" width="162" height="48" alt="Download on the App Store" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=app.totcho.tot">
+              <img src="/images/badges/google-play.svg" width="162" height="48" alt="Get it on Google Play" />
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="site-footer-brand">Tot — carb counting for families</p>
+        <nav aria-label="Footer">
+          <ul class="site-footer-links">
+            <li><a href="/" aria-current="page">Home</a></li>
+            <li><a href="/how-it-works/">How it works</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/privacy/">Privacy policy</a></li>
+          </ul>
+        </nav>
+        <p>Questions? <a href="mailto:hello@totcho.app">hello@totcho.app</a></p>
+        <p class="disclaimer">
+          Tot is a carbohydrate calculator, not a medical device. It does not provide medical advice or
+          insulin dosing. Always follow the guidance of your healthcare team.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

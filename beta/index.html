@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Join the Tot beta — Free carb counting app</title>
+    <meta
+      name="description"
+      content="Tot is in beta testing. Become a tester and get the free carb counting app for families before anyone else."
+    />
+    <link rel="canonical" href="https://totcho.app/beta/" />
+    <meta name="theme-color" content="#E60080" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Join the Tot beta — Free carb counting app" />
+    <meta
+      property="og:description"
+      content="Tot is in beta testing. Become a tester and get the free carb counting app for families before anyone else."
+    />
+    <meta property="og:url" content="https://totcho.app/beta/" />
+    <meta property="og:image" content="https://totcho.app/images/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="/favicon/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon/favicon-96x96.png" type="image/png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link rel="preload" href="/fonts/InterVariable-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/scripts/site-config.js"></script>
+    <script src="/scripts/header.js" defer></script>
+  </head>
+  <body class="site">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container site-header-inner">
+        <a class="site-logo" href="/">
+          <img src="/images/logo.svg" width="98" height="40" alt="Tot home" />
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="/how-it-works/">How it works</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-intro">
+        <div class="container prose">
+          <h1>Join the Tot beta</h1>
+          <p>
+            Tot isn't in the App Store or Google Play just yet. We're testing it with a small group of
+            families first, and we'd love you to be one of them.
+          </p>
+          <p>
+            Testers get the full app, free, before anyone else. All we ask is that you use it at home and
+            tell us what works and what doesn't.
+          </p>
+
+          <h2>How to join</h2>
+          <p>Email <strong>hello@totcho.app</strong> and we'll get you set up. Please include:</p>
+          <ul>
+            <li>whether you use an <strong>iPhone</strong> or <strong>Android</strong> phone</li>
+            <li>
+              the email address for your <strong>Apple ID</strong> (iPhone) or
+              <strong>Google Play account</strong> (Android), so we can send your invite there
+            </li>
+          </ul>
+          <div class="beta-actions">
+            <a class="btn" id="beta-iphone" href="mailto:hello@totcho.app?subject=Tot%20beta%20tester%20%E2%80%93%20iPhone&amp;body=Hi%2C%20I'd%20like%20to%20test%20Tot.%0D%0A%0D%0APhone%3A%20iPhone%0D%0AApple%20ID%20email%3A%0D%0A%0D%0AAnything%20else%20you'd%20like%20to%20tell%20us%20(optional)%3A%0D%0A">Email us for iPhone</a>
+            <a class="btn" id="beta-android" href="mailto:hello@totcho.app?subject=Tot%20beta%20tester%20%E2%80%93%20Android&amp;body=Hi%2C%20I'd%20like%20to%20test%20Tot.%0D%0A%0D%0APhone%3A%20Android%0D%0AGoogle%20Play%20account%20email%3A%0D%0A%0D%0AAnything%20else%20you'd%20like%20to%20tell%20us%20(optional)%3A%0D%0A">Email us for Android</a>
+          </div>
+          <p>Or email us directly: <a href="mailto:hello@totcho.app">hello@totcho.app</a></p>
+
+          <h2>What happens next</h2>
+          <p>
+            We'll reply with an invite and simple setup steps. On iPhone, you'll install Tot through Apple's
+            free TestFlight app. On Android, you'll get it through Google Play.
+          </p>
+          <p class="fine-print">
+            We'll only use your email to set you up as a tester and ask for your feedback.
+          </p>
+          <p><a href="/">← Back to Tot</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="site-footer-brand">Tot — carb counting for families</p>
+        <nav aria-label="Footer">
+          <ul class="site-footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/how-it-works/">How it works</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/privacy/">Privacy policy</a></li>
+          </ul>
+        </nav>
+        <p>Questions? <a href="mailto:hello@totcho.app">hello@totcho.app</a></p>
+        <p class="disclaimer">
+          Tot is a carbohydrate calculator, not a medical device. It does not provide medical advice or
+          insulin dosing. Always follow the guidance of your healthcare team.
+        </p>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        if (!window.URLSearchParams) return;
+        var platform = new URLSearchParams(location.search).get("platform");
+        if (platform !== "iphone" && platform !== "android") return;
+        var button = document.getElementById("beta-" + platform);
+        if (button) button.classList.add("is-current");
+      })();
+    </script>
+  </body>
+</html>

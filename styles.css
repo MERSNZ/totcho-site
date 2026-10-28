@@ -741,3 +741,188 @@ li {
     grid-template-columns: 1fr;
   }
 }
+
+/* Beta sign-up. Default (and no JS) shows the tester buttons.
+   html[data-app-status="live"] is set by /scripts/site-config.js. */
+
+:root {
+  /* #E60080 with white text is 4.49:1, under WCAG AA. #DC0078 is 4.87:1. */
+  --btn: #dc0078;
+  --btn-hover: #c4006a;
+}
+
+.site .btn,
+.beta-copy {
+  border-radius: 0;
+  appearance: none;
+}
+
+.site .btn {
+  display: inline-block;
+  margin: 0;
+  padding: 0.75rem 1.1rem;
+  border: 1px solid transparent;
+  background: var(--btn);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.site a.btn:hover,
+.site .btn:hover {
+  background: var(--btn-hover);
+  color: #fff;
+}
+
+.site .btn:focus-visible,
+.site .beta-copy:focus-visible {
+  outline: 3px solid var(--grey-900);
+  outline-offset: 3px;
+}
+
+.site .btn-secondary {
+  background: #fff;
+  color: var(--grey-900);
+  border-color: var(--border);
+}
+
+.site .btn-secondary:hover {
+  background: var(--grey-50);
+  color: var(--grey-900);
+}
+
+.site .btn.is-current {
+  box-shadow: 0 0 0 3px var(--grey-900);
+}
+
+.get-tot {
+  margin: 1.75rem 0 1rem;
+}
+
+.get-tot__beta,
+.beta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.get-tot__note {
+  flex: 1 0 100%;
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--grey-500);
+}
+
+.site .get-tot__note strong {
+  font-weight: 600;
+  color: var(--grey-900);
+}
+
+.hero .get-tot {
+  margin-bottom: 0.25rem;
+}
+
+.hero .hero-note {
+  margin-top: 0.25rem;
+}
+
+.get-tot__live {
+  display: none;
+}
+
+html[data-app-status="live"] .get-tot__beta {
+  display: none;
+}
+
+html[data-app-status="live"] .get-tot__live {
+  display: flex;
+}
+
+.get-tot .store-badges {
+  margin: 0;
+}
+
+.cta-band .get-tot {
+  margin-bottom: 0;
+}
+
+.cta-band .get-tot__beta,
+.cta-band .get-tot__live {
+  justify-content: center;
+}
+
+.cta-band .get-tot__note {
+  text-align: center;
+}
+
+.about-story .get-tot {
+  margin-bottom: 0;
+}
+
+@media (max-width: 479px) {
+  .get-tot__beta,
+  .beta-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cta-band .get-tot__beta {
+    align-items: center;
+  }
+}
+
+.beta-dialog {
+  width: calc(100vw - 32px);
+  max-width: 480px;
+  max-height: calc(100vh - 32px);
+  margin: auto;
+  padding: 1.75rem 1.5rem;
+  overflow: auto;
+  border: none;
+  border-radius: 0;
+  background: #fff;
+  color: var(--grey-600);
+}
+
+.beta-dialog::backdrop {
+  background: rgba(23, 23, 23, 0.55);
+}
+
+.site .beta-dialog h2 {
+  font-size: 1.5rem;
+}
+
+.site .beta-dialog h3 {
+  margin-top: 1.5rem;
+}
+
+.beta-copy-row {
+  font-size: 0.9375rem;
+}
+
+.beta-address {
+  font-weight: 600;
+  color: var(--grey-900);
+  user-select: text;
+}
+
+.beta-copy {
+  margin-left: 0.35rem;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--border);
+  background: #fff;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--grey-900);
+  cursor: pointer;
+}
+
+.fine-print {
+  font-size: 0.8125rem;
+  color: var(--grey-500);
+}

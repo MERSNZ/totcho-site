@@ -746,9 +746,7 @@ li {
    html[data-app-status="live"] is set by /scripts/site-config.js. */
 
 :root {
-  /* #E60080 with white text is 4.49:1, under WCAG AA. #DC0078 is 4.87:1. */
-  --btn: #dc0078;
-  --btn-hover: #c4006a;
+  --btn-stroke: #e60080;
 }
 
 .site .btn,
@@ -761,9 +759,9 @@ li {
   display: inline-block;
   margin: 0;
   padding: 0.75rem 1.1rem;
-  border: 1px solid transparent;
-  background: var(--btn);
-  color: #fff;
+  border: 2px solid var(--btn-stroke);
+  background: #fff;
+  color: var(--grey-900);
   font: inherit;
   font-weight: 600;
   line-height: 1.2;
@@ -774,8 +772,8 @@ li {
 
 .site a.btn:hover,
 .site .btn:hover {
-  background: var(--btn-hover);
-  color: #fff;
+  background: var(--pink-tint);
+  color: var(--grey-900);
 }
 
 .site .btn:focus-visible,
@@ -785,9 +783,9 @@ li {
 }
 
 .site .btn-secondary {
+  border: 1px solid var(--border);
   background: #fff;
   color: var(--grey-900);
-  border-color: var(--border);
 }
 
 .site .btn-secondary:hover {
@@ -875,17 +873,34 @@ html[data-app-status="live"] .get-tot__live {
   }
 }
 
+.beta-dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+
 .beta-dialog {
   width: calc(100vw - 32px);
   max-width: 480px;
   max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
   margin: auto;
-  padding: 1.75rem 1.5rem;
-  overflow: auto;
+  padding: 1.5rem 1.5rem 1.25rem;
+  overflow: hidden;
   border: none;
   border-radius: 0;
   background: #fff;
   color: var(--grey-600);
+}
+
+.beta-dialog__body {
+  min-height: 0;
+  overflow: auto;
+}
+
+.beta-dialog > .btn-secondary {
+  flex: none;
+  align-self: flex-start;
+  margin-top: 1rem;
 }
 
 .beta-dialog::backdrop {
@@ -893,11 +908,28 @@ html[data-app-status="live"] .get-tot__live {
 }
 
 .site .beta-dialog h2 {
-  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.375rem;
 }
 
 .site .beta-dialog h3 {
-  margin-top: 1.5rem;
+  margin: 0.85rem 0 0.35rem;
+}
+
+.site .beta-dialog p {
+  margin-bottom: 0.65rem;
+}
+
+.beta-dialog ul {
+  margin: 0 0 0.65rem;
+}
+
+.beta-dialog li {
+  margin: 0.2rem 0;
+}
+
+.site .beta-dialog .fine-print {
+  margin-bottom: 0;
 }
 
 .beta-copy-row {
@@ -911,15 +943,40 @@ html[data-app-status="live"] .get-tot__live {
 }
 
 .beta-copy {
-  margin-left: 0.35rem;
-  padding: 0.15rem 0.5rem;
-  border: 1px solid var(--border);
-  background: #fff;
-  font: inherit;
-  font-size: 0.875rem;
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin: 0 0 0 0.15rem;
+  padding: 0;
+  border: none;
+  background: transparent;
   color: var(--grey-900);
+  vertical-align: middle;
   cursor: pointer;
+}
+
+.beta-copy:hover {
+  color: var(--pink);
+}
+
+.beta-copy svg {
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.beta-copy .beta-copy__done,
+.beta-copy.is-copied .beta-copy__icon {
+  display: none;
+}
+
+.beta-copy.is-copied .beta-copy__done {
+  display: block;
 }
 
 .fine-print {

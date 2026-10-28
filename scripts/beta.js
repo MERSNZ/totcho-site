@@ -62,12 +62,14 @@
     var timer;
     copyBtn.addEventListener("click", function () {
       navigator.clipboard.writeText("hello@totcho.app").then(function () {
-        copyBtn.textContent = "Copied";
+        copyBtn.classList.add("is-copied");
+        copyBtn.setAttribute("aria-label", "Copied");
         clearTimeout(timer);
         timer = setTimeout(function () {
-          copyBtn.textContent = "Copy";
+          copyBtn.classList.remove("is-copied");
+          copyBtn.setAttribute("aria-label", "Copy");
         }, 2000);
-      });
+      }, function () {});
     });
   }
 

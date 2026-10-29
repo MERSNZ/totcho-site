@@ -41,3 +41,13 @@
 
   header.addEventListener('focusin', () => header.classList.remove('is-hidden'));
 })();
+
+// “© 2026 Totcho” this year, then “© 2026 - 2027” and so on.
+(() => {
+  const start = 2026;
+  const year = new Date().getFullYear();
+  const label = year > start ? `${start} - ${year}` : String(start);
+  document.querySelectorAll('.copyright').forEach((el) => {
+    el.textContent = `© ${label} Totcho`;
+  });
+})();

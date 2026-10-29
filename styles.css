@@ -646,6 +646,14 @@ li {
   color: var(--grey-900);
 }
 
+.site-footer-brand .tm {
+  font-size: 0.6em;
+  line-height: 0;
+  position: relative;
+  top: -0.55em;
+  font-weight: 600;
+}
+
 .site-footer-links {
   display: flex;
   flex-wrap: wrap;
@@ -673,6 +681,11 @@ li {
 
 .site .site-footer-links a[aria-current='page'] {
   font-weight: 600;
+}
+
+.site .copyright {
+  margin: 0;
+  font-size: 0.8125rem;
 }
 
 .site .disclaimer {

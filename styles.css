@@ -346,6 +346,7 @@ li {
   max-width: min(300px, 100%);
   max-height: 300px;
   opacity: 0.6;
+  filter: drop-shadow(0 16px 14px rgb(23 23 23 / 28%));
 }
 
 .photo-tilt {
@@ -447,7 +448,7 @@ li {
   display: block;
   margin-bottom: 1rem;
   fill: none;
-  stroke: var(--grey-900);
+  stroke: var(--pink);
   stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -646,14 +647,6 @@ li {
   color: var(--grey-900);
 }
 
-.site-footer-brand .tm {
-  font-size: 0.6em;
-  line-height: 0;
-  position: relative;
-  top: -0.55em;
-  font-weight: 600;
-}
-
 .site-footer-links {
   display: flex;
   flex-wrap: wrap;
@@ -681,11 +674,6 @@ li {
 
 .site .site-footer-links a[aria-current='page'] {
   font-weight: 600;
-}
-
-.site .copyright {
-  margin: 0;
-  font-size: 0.8125rem;
 }
 
 .site .disclaimer {

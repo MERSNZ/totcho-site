@@ -750,8 +750,7 @@ li {
   --btn-stroke: #e60080;
 }
 
-.site .btn,
-.beta-copy {
+.site .btn {
   border-radius: 0;
   appearance: none;
 }
@@ -777,8 +776,7 @@ li {
   color: var(--grey-900);
 }
 
-.site .btn:focus-visible,
-.site .beta-copy:focus-visible {
+.site .btn:focus-visible {
   outline: 3px solid var(--grey-900);
   outline-offset: 3px;
 }
@@ -796,6 +794,39 @@ li {
 
 .site .btn.is-current {
   box-shadow: 0 0 0 3px var(--grey-900);
+}
+
+/* Phone: the matching call-to-action leads. Desktop stays even.
+   On /beta/, ?platform= moves that platform's instructions first. */
+html[data-device="ios"] a.btn[data-beta-platform="iPhone"],
+html[data-device="android"] a.btn[data-beta-platform="Android"] {
+  box-shadow: 0 0 0 3px var(--grey-900);
+}
+
+html[data-device="android"] .get-tot__beta a.btn[data-beta-platform="Android"] {
+  order: -1;
+}
+
+.beta-platforms {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+html[data-device="android"]:not([data-beta-focus="iphone"]) .beta-platform--android,
+html[data-beta-focus="android"] .beta-platform--android {
+  order: -1;
+}
+
+.site .beta-dialog .steps,
+.site .beta-platform .steps {
+  margin-bottom: 0.75rem;
+}
+
+.site .beta-dialog .steps p,
+.site .beta-platform .steps p {
+  margin-top: 0.65rem;
 }
 
 .get-tot {
@@ -931,53 +962,6 @@ html[data-app-status="live"] .get-tot__live {
 
 .site .beta-dialog .fine-print {
   margin-bottom: 0;
-}
-
-.beta-copy-row {
-  font-size: 0.9375rem;
-}
-
-.beta-address {
-  font-weight: 600;
-  color: var(--grey-900);
-  user-select: text;
-}
-
-.beta-copy {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.75rem;
-  height: 1.75rem;
-  margin: 0 0 0 0.15rem;
-  padding: 0;
-  border: none;
-  background: transparent;
-  color: var(--grey-900);
-  vertical-align: middle;
-  cursor: pointer;
-}
-
-.beta-copy:hover {
-  color: var(--pink);
-}
-
-.beta-copy svg {
-  display: block;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.beta-copy .beta-copy__done,
-.beta-copy.is-copied .beta-copy__icon {
-  display: none;
-}
-
-.beta-copy.is-copied .beta-copy__done {
-  display: block;
 }
 
 .fine-print {

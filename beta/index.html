@@ -15,7 +15,7 @@
     <title>Join the Tot beta — Carb counting for diabetes</title>
     <meta
       name="description"
-      content="Tot is in beta. Try a free carb counting app for families living with diabetes, and get it before anyone else."
+      content="Join the Tot beta. On iPhone or iPad, install Tot through TestFlight. On Android, join the tester group, then install from Google Play."
     />
     <link rel="canonical" href="https://totcho.app/beta/" />
     <meta name="theme-color" content="#E60080" />
@@ -24,7 +24,7 @@
     <meta property="og:title" content="Join the Tot beta — Carb counting for diabetes" />
     <meta
       property="og:description"
-      content="Tot is in beta. Try a free carb counting app for families living with diabetes, and get it before anyone else."
+      content="Join the Tot beta. On iPhone or iPad, install Tot through TestFlight. On Android, join the tester group, then install from Google Play."
     />
     <meta property="og:url" content="https://totcho.app/beta/" />
     <meta property="og:image" content="https://totcho.app/images/og-image.png" />
@@ -63,37 +63,48 @@
         <div class="container prose">
           <h1>Join the Tot beta</h1>
           <p>
-            Tot isn't publicly available on the App Store or Google Play just yet. We're testing it with a small group of
-            families first, and we'd love you to be one of them.
-          </p>
-          <p>
-            Testers get the full app, free, before anyone else. All we ask is that you use it at home and
-            tell us what works and what doesn't.
+            It's a beta. Please use Tot a few times a week over the next couple of weeks, and send feedback from
+            inside the app, or email <a href="mailto:hello@totcho.app">hello@totcho.app</a> if you have any questions.
           </p>
 
-          <h2>How to join</h2>
-          <p>Email <strong>hello@totcho.app</strong> and we'll get you set up. Please confirm:</p>
-          <ul>
-            <li>whether you use an <strong>iPhone</strong> or <strong>Android</strong> phone</li>
-            <li>
-              the email address for your <strong>Apple ID</strong> (iPhone) or
-              <strong>Google Play account</strong> (Android), so we can send your invite there
-            </li>
-          </ul>
-          <div class="beta-actions">
-            <a class="btn" id="beta-iphone" href="mailto:hello@totcho.app?subject=Tot%20beta%20tester%20%E2%80%93%20iPhone&amp;body=Hi%2C%20I'd%20like%20to%20test%20Tot.%0D%0A%0D%0APhone%3A%20iPhone%0D%0AApple%20ID%20email%3A%0D%0A%0D%0AAnything%20else%20you'd%20like%20to%20tell%20us%20(optional)%3A%0D%0A">Email us for iPhone</a>
-            <a class="btn" id="beta-android" href="mailto:hello@totcho.app?subject=Tot%20beta%20tester%20%E2%80%93%20Android&amp;body=Hi%2C%20I'd%20like%20to%20test%20Tot.%0D%0A%0D%0APhone%3A%20Android%0D%0AGoogle%20Play%20account%20email%3A%0D%0A%0D%0AAnything%20else%20you'd%20like%20to%20tell%20us%20(optional)%3A%0D%0A">Email us for Android</a>
+          <div class="beta-platforms">
+            <section class="beta-platform beta-platform--ios" aria-labelledby="ios-beta">
+              <h2 id="ios-beta">Join the iOS beta</h2>
+              <p>
+                Install Apple's free TestFlight app from the
+                <a data-beta-link="testflight-app" href="#" target="_blank" rel="noopener noreferrer">App Store</a>.
+              </p>
+              <p>Then tap <strong>Join the beta</strong> on your iPhone or iPad.</p>
+              <p>Tot installs through TestFlight. Updates show up there too.</p>
+              <p>
+                <a class="btn" data-beta-link="ios" href="#" target="_blank" rel="noopener noreferrer">Join the beta</a>
+              </p>
+            </section>
+
+            <section class="beta-platform beta-platform--android" aria-labelledby="android-beta">
+              <h2 id="android-beta">Join the Android beta</h2>
+              <ol class="steps">
+                <li>
+                  <strong>Join our tester group.</strong>
+                  Sign in with the Google account you use for the Play Store, then tap Join group.
+                  <p>
+                    <a class="btn" data-beta-link="android-group" href="#" target="_blank" rel="noopener noreferrer">Join group</a>
+                  </p>
+                </li>
+                <li>
+                  <strong>Become a tester and install.</strong>
+                  Tap "Become a tester", then use the "Download it on Google Play" link on that page.
+                  <p>
+                    <a class="btn" data-beta-link="android-optin" href="#" target="_blank" rel="noopener noreferrer">Become a tester</a>
+                  </p>
+                </li>
+              </ol>
+              <p class="fine-print">
+                If step 2 says the app isn't available, wait a few minutes after joining the group and try again.
+              </p>
+            </section>
           </div>
-          <p>Or email us directly: <a href="mailto:hello@totcho.app">hello@totcho.app</a></p>
 
-          <h2>What happens next</h2>
-          <p>
-            We'll reply with an invite and simple setup steps. On iPhone, you'll install Tot through Apple's
-            free TestFlight app. On Android, you'll get it through Google Play.
-          </p>
-          <p class="fine-print">
-            We'll only use your email to set you up as a tester and ask for your feedback.
-          </p>
           <p><a href="/">← Back to Tot</a></p>
         </div>
       </section>
@@ -118,14 +129,5 @@
         </p>
       </div>
     </footer>
-    <script>
-      (function () {
-        if (!window.URLSearchParams) return;
-        var platform = new URLSearchParams(location.search).get("platform");
-        if (platform !== "iphone" && platform !== "android") return;
-        var button = document.getElementById("beta-" + platform);
-        if (button) button.classList.add("is-current");
-      })();
-    </script>
   </body>
 </html>

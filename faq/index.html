@@ -37,6 +37,7 @@
     <link rel="manifest" href="/favicon/site.webmanifest" />
     <link rel="preload" href="/fonts/InterVariable-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/styles.css" />
+    <script src="/scripts/site-config.js"></script>
     <script src="/scripts/header.js" defer></script>
 
     <script type="application/ld+json">
@@ -49,7 +50,7 @@
             "name": "Can I download Tot now?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Tot is in beta testing, and we're looking for families to try it. Email hello@totcho.app to join as a tester. It's free to join, and you'll get the app before anyone else."
+              "text": "Tot is in beta testing, and we're looking for families to try it. It's free to join. Join the iOS beta or the Android beta at https://totcho.app/beta/, and you'll get the app before anyone else."
             }
           },
           {
@@ -184,8 +185,10 @@
               <summary>Can I download Tot now?</summary>
               <div class="faq-answer">
                 <p>
-                  Tot is in beta testing, and we're looking for families to try it. Email
-                  <a href="mailto:hello@totcho.app">hello@totcho.app</a> to join as a tester. It's free to join,
+                  Tot is in beta testing, and we're looking for families to try it. It's free to join.
+                  <a href="/beta/?platform=iphone" data-beta-platform="iPhone">Join the iOS beta</a>
+                  or
+                  <a href="/beta/?platform=android" data-beta-platform="Android">join the Android beta</a>,
                   and you'll get the app before anyone else.
                 </p>
               </div>
@@ -332,5 +335,48 @@
         </p>
       </div>
     </footer>
+
+    <dialog class="beta-dialog" id="beta-dialog" aria-labelledby="beta-dialog-title">
+      <div class="beta-dialog__body">
+        <h2 id="beta-dialog-title">Join the iOS beta</h2>
+        <div data-beta-panel="ios">
+          <p>
+            Install Apple's free TestFlight app from the
+            <a data-beta-link="testflight-app" href="#" target="_blank" rel="noopener noreferrer">App Store</a>.
+          </p>
+          <p>Then tap <strong>Join the beta</strong> on your iPhone or iPad.</p>
+          <p>Tot installs through TestFlight. Updates show up there too.</p>
+          <p>
+            <a class="btn" data-beta-link="ios" href="#" target="_blank" rel="noopener noreferrer">Join the beta</a>
+          </p>
+        </div>
+        <div data-beta-panel="android" hidden>
+          <ol class="steps">
+            <li>
+              <strong>Join our tester group.</strong>
+              Sign in with the Google account you use for the Play Store, then tap Join group.
+              <p>
+                <a class="btn" data-beta-link="android-group" href="#" target="_blank" rel="noopener noreferrer">Join group</a>
+              </p>
+            </li>
+            <li>
+              <strong>Become a tester and install.</strong>
+              Tap "Become a tester", then use the "Download it on Google Play" link on that page.
+              <p>
+                <a class="btn" data-beta-link="android-optin" href="#" target="_blank" rel="noopener noreferrer">Become a tester</a>
+              </p>
+            </li>
+          </ol>
+          <p class="fine-print">
+            If step 2 says the app isn't available, wait a few minutes after joining the group and try again.
+          </p>
+        </div>
+        <p>
+          It's a beta. Please use Tot a few times a week over the next couple of weeks, and send feedback from
+          inside the app, or email <a href="mailto:hello@totcho.app">hello@totcho.app</a> if you have any questions.
+        </p>
+      </div>
+      <button type="button" class="btn btn-secondary" id="beta-close">Not now</button>
+    </dialog>
   </body>
 </html>

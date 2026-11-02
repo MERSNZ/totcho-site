@@ -75,8 +75,10 @@
             <h2 id="setup">Getting set up (once)</h2>
             <ol class="steps">
               <li>
-                <strong>Join the beta.</strong> Email <a href="mailto:hello@totcho.app">hello@totcho.app</a> and
-                we'll send you an invite.
+                <strong>Join the beta.</strong>
+                <a href="/beta/?platform=iphone" data-beta-platform="iPhone">Join the iOS beta</a>
+                or
+                <a href="/beta/?platform=android" data-beta-platform="Android">join the Android beta</a>.
               </li>
               <li><strong>Sign in</strong> with your Google or Apple account. No new password to remember.</li>
               <li><strong>Create your household.</strong> Everyone in it shares the same saved foods.</li>
@@ -255,8 +257,8 @@
           <h2 id="cta">Ready to try it at your next meal?</h2>
           <div class="get-tot">
             <div class="get-tot__beta">
-              <a class="btn" href="/beta/?platform=iphone" data-beta-platform="iPhone">Get Tot for iPhone</a>
-              <a class="btn" href="/beta/?platform=android" data-beta-platform="Android">Get Tot for Android</a>
+              <a class="btn" href="/beta/?platform=iphone" data-beta-platform="iPhone">Join the iOS beta</a>
+              <a class="btn" href="/beta/?platform=android" data-beta-platform="Android">Join the Android beta</a>
               <p class="get-tot__note"><strong>Now in beta.</strong> Testers wanted, and it's free to join.</p>
             </div>
             <div class="store-badges get-tot__live">
@@ -294,41 +296,43 @@
 
     <dialog class="beta-dialog" id="beta-dialog" aria-labelledby="beta-dialog-title">
       <div class="beta-dialog__body">
-      <h2 id="beta-dialog-title">Tot is in beta</h2>
-      <p>
-        Tot isn't publicly available on the App Store or Google Play just yet. We're testing it with a small group of families
-        first, and we'd love you to be one of them.
-      </p>
-      <p>
-        Testers get the full app, free, before anyone else. All we ask is that you use it at home and tell us
-        what works and what doesn't.
-      </p>
-      <h3>How to join</h3>
-      <p>Email <strong>hello@totcho.app</strong> and we'll get you set up. Please confirm:</p>
-      <ul>
-        <li>that you're using <strong data-beta-slot="platform">iPhone</strong></li>
-        <li>
-          the email address for your <strong data-beta-slot="account">Apple ID</strong>, so we can send your
-          invite there
-        </li>
-      </ul>
-      <p>
-        <a class="btn" id="beta-mailto" href="mailto:hello@totcho.app?subject=Tot%20beta%20tester%20%E2%80%93%20iPhone&amp;body=Hi%2C%20I'd%20like%20to%20test%20Tot.%0D%0A%0D%0APhone%3A%20iPhone%0D%0AApple%20ID%20email%3A%0D%0A%0D%0AAnything%20else%20you'd%20like%20to%20tell%20us%20(optional)%3A%0D%0A">Email us to join</a>
-      </p>
-      <p class="beta-copy-row">
-        Or copy the address: <span class="beta-address">hello@totcho.app</span>
-        <button type="button" class="beta-copy" id="beta-copy" aria-label="Copy">
-          <!-- Lucide (https://lucide.dev), ISC licence -->
-          <svg class="beta-copy__icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="18" height="18">
-            <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
-            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
-          </svg>
-          <svg class="beta-copy__done" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="18" height="18">
-            <path d="M20 6 9 17l-5-5" />
-          </svg>
-        </button>
-      </p>
-      <p class="fine-print">We'll only use your email to set you up as a tester and ask for your feedback.</p>
+        <h2 id="beta-dialog-title">Join the iOS beta</h2>
+        <div data-beta-panel="ios">
+          <p>
+            Install Apple's free TestFlight app from the
+            <a data-beta-link="testflight-app" href="#" target="_blank" rel="noopener noreferrer">App Store</a>.
+          </p>
+          <p>Then tap <strong>Join the beta</strong> on your iPhone or iPad.</p>
+          <p>Tot installs through TestFlight. Updates show up there too.</p>
+          <p>
+            <a class="btn" data-beta-link="ios" href="#" target="_blank" rel="noopener noreferrer">Join the beta</a>
+          </p>
+        </div>
+        <div data-beta-panel="android" hidden>
+          <ol class="steps">
+            <li>
+              <strong>Join our tester group.</strong>
+              Sign in with the Google account you use for the Play Store, then tap Join group.
+              <p>
+                <a class="btn" data-beta-link="android-group" href="#" target="_blank" rel="noopener noreferrer">Join group</a>
+              </p>
+            </li>
+            <li>
+              <strong>Become a tester and install.</strong>
+              Tap "Become a tester", then use the "Download it on Google Play" link on that page.
+              <p>
+                <a class="btn" data-beta-link="android-optin" href="#" target="_blank" rel="noopener noreferrer">Become a tester</a>
+              </p>
+            </li>
+          </ol>
+          <p class="fine-print">
+            If step 2 says the app isn't available, wait a few minutes after joining the group and try again.
+          </p>
+        </div>
+        <p>
+          It's a beta. Please use Tot a few times a week over the next couple of weeks, and send feedback from
+          inside the app, or email <a href="mailto:hello@totcho.app">hello@totcho.app</a> if you have any questions.
+        </p>
       </div>
       <button type="button" class="btn btn-secondary" id="beta-close">Not now</button>
     </dialog>

@@ -79,6 +79,6 @@
   if (appStatus !== "beta" || isBetaPage()) return;
 
   var script = document.createElement("script");
-  script.src = "/scripts/beta.js";
+  script.src = "/scripts/beta.js?v=2";
   document.head.appendChild(script);
 })();

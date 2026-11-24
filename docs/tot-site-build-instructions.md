@@ -255,7 +255,7 @@ Build each question as a native `<details>`/`<summary>` element (accessible, no 
 # Frequently asked questions
 
 **Does Tot have a food database?**
-No, and that's on purpose. Tot holds your family's own list: the brands you buy, the recipes you cook, with numbers you've checked yourself. You add each food once from the packet, and after that it's always there.
+No, and that's on purpose. Tot holds your family's own list: the brands you buy, with numbers you've checked yourself. You add each food once, using the packet or a carb reference you trust, and after that it's always there.
 
 **Who is Tot for?**
 Families living with type 1 diabetes, and anyone else who counts carbs in the food they cook and eat at home.
@@ -279,7 +279,7 @@ No problem, just install the app on your new device and sign in with your Google
 Yes. Create one household, then invite others by scanning a QR code. Everyone shares the same saved foods.
 
 **Where do I find the carb %?**
-On the nutrition information panel on the packet. Look for **Carbohydrate** in the **per 100 g** column — that number is the %. For example, 62 g per 100 g = 62%. For fresh food without a label, use a trusted reference such as your diabetes team's carb lists.
+On the nutrition information panel on the packet. Look for **Carbohydrate** in the **per 100 g** column — that number is the %. For example, 62 g per 100 g = 62%. For fresh food without a label, use a carb reference you trust, such as your diabetes team's carb lists or a food composition database. You can also save a food by its carbs per piece or portion instead.
 
 **Do I need kitchen scales?**
 Yes. Digital scales give the best results.

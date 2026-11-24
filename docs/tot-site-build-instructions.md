@@ -117,7 +117,7 @@ Tot does one thing: works out how many carbs are in the food you're preparing an
 
 Render these five as a card grid (1 column mobile, 2–3 columns desktop). Each card has a [Lucide](https://lucide.dev) icon above its heading (in order: `calculator`, `users`, `cooking-pot`, `circle-check`, `wifi-off`), inlined as SVG with `aria-hidden="true"`, grey `#171717`, stroke width 1.5. Lucide is ISC-licensed; keep the attribution comment in the HTML.
 
-- **Save it once, use it every day** — Save a food once with its carb %. After that, just weigh it and tap.
+- **Save it once, use it every day** — Save a food once with its carb %, or its carbs per piece or portion. After that, just weigh it, or enter the number of portions, and tap.
 - **The whole household, on the same page** — One shared account and one saved list for your family, so grandparents and babysitters get the same numbers you do. Invite a partner, grandparent or older child with a quick QR code scan.
 - **Home cooking, sorted** — Tot up carb-containing ingredients as you cook, then weigh the finished dish. Tot works out its carb %, so homemade lasagne is as easy as pie.
 - **Fewer slip-ups** — Tot does the arithmetic, so you're not adding numbers in your head at 7am with a lunchbox half-packed.

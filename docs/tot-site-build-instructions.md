@@ -80,22 +80,22 @@ The current homepage has the contact email (it's behind Cloudflare email obfusca
 
 ### 4.1 Home (`/`)
 
-**`<title>`:** Tot — Free carb counting app for families
-**Meta description:** A free carbohydrate calculator for families living with type 1 diabetes. Weigh it, tap it, see the total. No ads, no subscriptions.
+**`<title>`:** Tot — your family's own carb list for type 1 diabetes
+**Meta description:** Save your family's foods once with their carb %. Then just pick, weigh, and Tot adds up the carbs. Free for families living with type 1 diabetes. No ads, no subscriptions.
 
 ---
 
 **Hero**
 
-# Carb counting, minus the maths.
+# Look up the carbs once. Tot remembers.
 
-Tot is a free carbohydrate calculator for families living with type 1 diabetes. Pick the food, weigh it, and Tot adds it up.
+Tot is a free carbohydrate calculator for families living with type 1 diabetes. Save the carb % of the foods your family eats. Next time, just pick, weigh, and Tot adds it up.
 
 [App store buttons]
 
 Free. No subscriptions, no ads, no data selling.
 
-[Screenshot: `home-list.png` — alt: "Tot's saved foods, listed A to Z with a search bar, and a running total of 38 g carbs"]
+[Screenshot: `home-list.png` — alt: "Tot's saved foods, listed A to Z with a search bar, and a running total of 38 g carbs". Caption below the phone frame, small grey text: "Your family's foods, saved once"]
 
 Layout: on desktop, text left and screenshot right. On mobile, text first, screenshot below the buttons.
 
@@ -105,7 +105,7 @@ Layout: on desktop, text left and screenshot right. On mobile, text first, scree
 
 Peer at the label. Weigh the food. Work out the carbs. Check your sum. Then do it again for the next thing on the plate.
 
-Breakfast, school lunch, after-school snack, dinner — every day. There's no sugar-coating it, carb counting is a burden.
+Breakfast, school lunch, after-school snack, dinner — every day. There's no sugar-coating it, carb counting is hard work, and most of it is for the same foods you had yesterday.
 
 [Photo: `cereal-packet.png` (keep transparency) — alt: "Back of a breakfast cereal sachet, showing carbohydrate at 65.2 g per 100 g on the nutrition panel". Not a phone frame; sit to the right of the text on desktop (300px wide), below the text on mobile, at 75% opacity, rotated 10° clockwise.]
 
@@ -115,12 +115,12 @@ Breakfast, school lunch, after-school snack, dinner — every day. There's no su
 
 Tot does one thing: works out how many carbs are in the food you're preparing and eating. No diet tracking, no charts, no features you'll never use. Just quick, accurate carb counting.
 
-Render these five as a card grid (1 column mobile, 2–3 columns desktop). Each card has a [Lucide](https://lucide.dev) icon above its heading (in order: `calculator`, `circle-check`, `cooking-pot`, `users`, `wifi-off`), inlined as SVG with `aria-hidden="true"`, grey `#171717`, stroke width 1.5. Lucide is ISC-licensed; keep the attribution comment in the HTML.
+Render these five as a card grid (1 column mobile, 2–3 columns desktop). Each card has a [Lucide](https://lucide.dev) icon above its heading (in order: `calculator`, `users`, `cooking-pot`, `circle-check`, `wifi-off`), inlined as SVG with `aria-hidden="true"`, grey `#171717`, stroke width 1.5. Lucide is ISC-licensed; keep the attribution comment in the HTML.
 
-- **Less mental maths** — Save a food once with its carb %. After that, just weigh it and tap.
+- **Save it once, use it every day** — Save a food once with its carb %. After that, just weigh it and tap.
+- **The whole household, on the same page** — One shared account and one saved list for your family, so grandparents and babysitters get the same numbers you do. Invite a partner, grandparent or older child with a quick QR code scan.
+- **Home cooking, sorted** — Tot up carb-containing ingredients as you cook, then weigh the finished dish. Tot works out its carb %, so homemade lasagne is as easy as pie.
 - **Fewer slip-ups** — Tot does the arithmetic, so you're not adding numbers in your head at 7am with a lunchbox half-packed.
-- **Home cooking, sorted** — Tot up carb containing ingredients as you cook, then weigh the finished dish. Tot turns it into a food with a known carb %, so a scoop of homemade lasagne is as easy as a slice of bread.
-- **The whole household, on the same page** — One shared account for your family. Invite a partner, grandparent or older child with a quick QR code scan.
 - **Works anywhere** — Tot works fully offline, even in airplane mode. Changes sync to everyone's phones when you're back online.
 
 [Screenshot: `home-weigh.png` — alt: "Weighing 65 g of banana at 20.4% carbohydrate in Tot, giving 13.3 g carbs"]
@@ -129,9 +129,10 @@ Render these five as a card grid (1 column mobile, 2–3 columns desktop). Each 
 
 **How it works**
 
-1. **Pick the food** from your saved list.
-2. **Weigh it** on your kitchen scales, or enter the number of pieces.
-3. **Add it to your Tot list.** Tot shows the total carbs as you go.
+1. **Save a food once.** Enter the carb % from the packet.
+2. **Pick the food** from your saved list.
+3. **Weigh it** on your kitchen scales, or enter the number of portions.
+4. **Add it to your Tot list.** Tot shows the total carbs as you go.
 
 [Screenshot: `tot-list.png` — alt: "Tot list with four foods, their weights and carbs, adding up to 45 g total carbohydrate"]
 
@@ -145,7 +146,7 @@ Panel background: light grey (`#F9F9F9`) only. No photo overlay.
 
 - The Tot app on your iPhone or Android phone
 - Digital kitchen scales
-- The carbohydrate % from your food packaging
+- The carbohydrate % from your food packaging (just the first time)
 
 ---
 
@@ -195,14 +196,14 @@ Tot works the way you already do — using your food, your scales and the label 
 
 Add the foods and ingredients your family eats. For each one, enter its carbohydrate % from the nutrition panel on the packet. Foods you count by the piece — crackers, nuggets, biscuits — can be saved per piece instead.
 
-You'll build up your list over the first week or so. After that, most items are already in there, ready to use.
+You'll build up your list over the first few weeks. After that, most items are already in there, ready to use.
 
 [Screenshot: `add-food.png` — alt: "Adding milk to the Tot library at 4.8% carbohydrate, with an optional carbs-per-piece field"]
 
 ## Every meal
 
 1. **Pick the food** from your saved list.
-2. **Weigh it**, or enter the number of pieces.
+2. **Weigh it**, or enter the number of portions.
 3. **Add it to your Tot list**, the total updates as you go.
 
 [Screenshots, as a left-to-right sequence below the steps (one row on desktop and tablet, a swipeable strip on narrow screens):
@@ -252,6 +253,9 @@ Lost your device? No problem, just install the app on your new device and sign i
 Build each question as a native `<details>`/`<summary>` element (accessible, no JS). Leave all closed by default. Also add `FAQPage` JSON-LD structured data in the `<head>` containing the same questions and answers (plain text, no placeholders).
 
 # Frequently asked questions
+
+**Does Tot have a food database?**
+No, and that's on purpose. Tot holds your family's own list: the brands you buy, the recipes you cook, with numbers you've checked yourself. You add each food once from the packet, and after that it's always there.
 
 **Who is Tot for?**
 Families living with type 1 diabetes, and anyone else who counts carbs in the food they cook and eat at home.

@@ -335,6 +335,17 @@ li {
   aspect-ratio: 1080 / 2291;
 }
 
+.phone-figure {
+  margin: 0 auto;
+}
+
+.phone-figure figcaption {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: var(--grey-500);
+}
+
 .photo {
   margin: 0 auto;
 }

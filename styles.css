@@ -335,6 +335,11 @@ li {
   aspect-ratio: 1080 / 2291;
 }
 
+.phone picture,
+.photo picture {
+  display: block;
+}
+
 .phone-figure {
   margin: 0 auto;
 }

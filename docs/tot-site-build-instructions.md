@@ -129,7 +129,7 @@ Render these five as a card grid (1 column mobile, 2–3 columns desktop). Each 
 
 **How it works**
 
-1. **Save a food once.** Enter the carb % from the packet.
+1. **Save a food once.** Enter the carb % from the packet, or its carbs per piece or portion.
 2. **Pick the food** from your saved list.
 3. **Weigh it** on your kitchen scales, or enter the number of portions.
 4. **Add it to your Tot list.** Tot shows the total carbs as you go.
